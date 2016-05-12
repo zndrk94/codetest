@@ -10,5 +10,5 @@ Write a function that, given a sequence, returns its equilibrium indices (if any
 
 ## Running the Test
 ```
-phpunit EquilibriumIndexTest.php
+python EquilibriumIndexTest.py
 ```
