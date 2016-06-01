@@ -1,12 +1,17 @@
 <?php
-
 require_once("./EquilibriumIndex.php");
-
 class EquilibriumIndex extends PHPUnit_Framework_TestCase
 {
 	public function testCase()
 	{
-		$arr = array(-7, 1, 5, 2, -4, 3, 0);
-		$this->assertEquals(array(3,6), getEquilibriums($arr));
+		// Should be 3
+		$arr = [1,1,1,1,2,2];
+		$this->assertEquals(3, getEquilibriums($arr));
+		// Should be 3
+		$arr = [1.0,1,1,1,2,2];
+		$this->assertEquals(3, getEquilibriums($arr));
+		// Should be -1 because no index 
+		$arr = [1,1,1,1,1,2,2];
+		$this->assertEquals(-1, getEquilibriums($arr));
 	}
 }
